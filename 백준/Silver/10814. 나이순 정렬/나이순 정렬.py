@@ -7,9 +7,9 @@ index = []
 
 for i in range(N):
     age, name = sys.stdin.readline().rstrip().split(" ")
-    answer.append([int(age), i, name])
+    answer.append([int(age), name])
 
-answer.sort()
+answer.sort(key=lambda x: x[0])
 
-for a, _, n in answer:
+for a, n in answer:
     print(a, n)
