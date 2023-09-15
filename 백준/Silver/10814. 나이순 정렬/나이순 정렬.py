@@ -5,7 +5,7 @@ N = int(sys.stdin.readline().rstrip())
 answer = []
 index = []
 
-for i in range(N):
+for _ in range(N):
     age, name = sys.stdin.readline().rstrip().split(" ")
     answer.append([int(age), name])
 
