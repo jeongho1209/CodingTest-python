@@ -1,11 +1,10 @@
 import sys
+
 sys.setrecursionlimit(10 ** 7)
 
 N, M = map(int, sys.stdin.readline().rstrip().split())
 
 graph = []
-
-visited = [[False] * M for _ in range(N)]
 
 answer = 0
 
@@ -22,9 +21,8 @@ def dfs(i, j):
     if graph[i][j] == 'P':
         answer += 1
 
-    if not visited[i][j]:
-        visited[i][j] = True
-        graph[i][j] = 'S'
+    if graph[i][j] != 'X':
+        graph[i][j] = 'X'
         dfs(i + 1, j)
         dfs(i, j + 1)
         dfs(i - 1, j)
