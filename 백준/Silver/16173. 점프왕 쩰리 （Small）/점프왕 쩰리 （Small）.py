@@ -8,7 +8,7 @@ for _ in range(N):
 
 
 def dfs(i, j):
-    if i < 0 or j < 0 or i >= N or j >= N:
+    if i >= N or j >= N:
         return 0
 
     if not visited[i][j]:
