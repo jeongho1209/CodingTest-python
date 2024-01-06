@@ -11,10 +11,9 @@ def dfs(s):
         return
 
     for i in range(s, N + 1):
-        if i >= s:
-            ans.append(i)
-            dfs(i)
-            ans.pop()
+        ans.append(i)
+        dfs(i)
+        ans.pop()
 
 
 dfs(1)
