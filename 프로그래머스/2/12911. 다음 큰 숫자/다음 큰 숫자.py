@@ -9,9 +9,9 @@ def solution(n):
     count_n = bin(n).count('1')
 
     for i in range(n + 1, 10000 ** 2):
-        target = bin(i)[2:]
+        target = bin(i)
         if target.count('1') == count_n:
-            answer = target
+            answer = int(target, 2)
             break
 
-    return int(answer, 2)
+    return answer
