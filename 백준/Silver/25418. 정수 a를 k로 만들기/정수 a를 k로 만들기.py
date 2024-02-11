@@ -7,9 +7,6 @@ queue = deque([(A, 0)])
 
 set1 = set()
 
-target = 0
-cnt = 0
-
 while queue:
     v, c = queue.popleft()
     if v == K:
