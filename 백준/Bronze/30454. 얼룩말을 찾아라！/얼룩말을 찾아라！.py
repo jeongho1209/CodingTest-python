@@ -2,44 +2,24 @@ import sys
 
 N, L = map(int, sys.stdin.readline().rstrip().split())
 
-arrs = []
-
-cnts = []
+counts = []
 
 for _ in range(N):
     arr = list(map(int, sys.stdin.readline().rstrip()))
-    arrs.append(arr)
-    ans = 0
+    cnt = 0
 
     if arr[-1] == 1:
-        ans += 1
+        cnt += 1
 
     for i in range(len(arr) - 1):
         if arr[i] == 1:
             if arr[i + 1] == 1:
                 continue
             else:
-                ans += 1
+                cnt += 1
 
-    cnts.append(ans)
+    counts.append(cnt)
 
-value_ans = max(cnts)
-cnt_ans = 0
+max_cnt = max(counts)
 
-for arr in arrs:
-    ans = 0
-
-    if arr[-1] == 1:
-        ans += 1
-
-    for i in range(len(arr) - 1):
-        if arr[i] == 1:
-            if arr[i + 1] == 1:
-                continue
-            else:
-                ans += 1
-
-    if ans == value_ans:
-        cnt_ans += 1
-
-print(value_ans, cnt_ans)
+print(max_cnt, counts.count(max_cnt))
