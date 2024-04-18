@@ -1,0 +1,8 @@
+import sys
+
+_ = sys.stdin.readline().rstrip()
+
+a = int(sys.stdin.readline().rstrip())
+b = int(sys.stdin.readline().rstrip())
+
+print(a * b)
